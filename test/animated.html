@@ -1,0 +1,28 @@
+<style>
+.slide-in {
+  animation: slideIn 1s ease-out;
+  display: inline-block;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.map-text {
+  font-size: 18px;
+  margin-top: 10px;
+}
+</style>
+
+<div class="slide-in">
+  <a href="YOUR_MAPS_LINK" target="_blank" style="text-decoration:none; color:#007bff;">
+    📍 Click here to view the location on Google Maps
+  </a>
+</div>

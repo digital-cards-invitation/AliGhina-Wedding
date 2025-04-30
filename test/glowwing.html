@@ -1,0 +1,19 @@
+<style>
+.glow-button {
+  background: #e91e63;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #e91e63, 0 0 20px #e91e63;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px #e91e63; }
+  to { box-shadow: 0 0 20px #e91e63, 0 0 30px #ff4081; }
+}
+</style>
+
+<a class="glow-button" href="YOUR_MAPS_LINK" target="_blank">📍 Open Location</a>

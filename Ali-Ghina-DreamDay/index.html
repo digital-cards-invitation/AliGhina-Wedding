@@ -203,6 +203,7 @@
             display: inline-block;
             margin-top: 2px;
             animation: fadeIn 3s ease-in-out;
+		animation: pulse 2s infinite;
     }
 	.location-link:hover {
             background-color: #d4c2d3;
@@ -312,6 +313,10 @@
   fill: white;
 }
 
+.whatsapp-icon-pill:hover {
+  transform: scale(1.15); /* 👈 zoom effect */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
 
 
 .phone-input p {
@@ -319,6 +324,18 @@
   font-size: 14px;
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.whatsapp-icon-pill {
+  animation: pulse 2s infinite;
+}
 
 	</style>
 </head>
@@ -397,7 +414,7 @@
         1.72 2z"/>
     </svg>
   </a>
-  <p id="ayle">76536154
+  <p id="ayle">إضغط هنا
   </p>
   <p id="ayle">: للإعتذار قبل تاريخ 1/6/2025</p>
 </div>
@@ -488,6 +505,11 @@ window.onload = function () {
     music.play()
       .then(() => {
         console.log("🎵 Music started");
+	      setTimeout(() => {
+        music.pause();  
+	    music.currentTime = 0; 
+        console.log("⏹️ Music stopped after 10 seconds");
+      }, 20000); // 10 seconds
       })
       .catch(e => console.error("⚠️ Play error:", e));
 
@@ -499,6 +521,11 @@ card.addEventListener('click', () => {
     music.play()
       .then(() => {
         console.log("🎵 Music started");
+	      setTimeout(() => {
+        music.pause();  
+	    music.currentTime = 0; 
+        console.log("⏹️ Music stopped after 10 seconds");
+      }, 20000); // 10 seconds
       })
       .catch(e => console.error("⚠️ Play error:", e));
 
